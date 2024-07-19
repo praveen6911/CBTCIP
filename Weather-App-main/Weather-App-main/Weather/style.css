@@ -1,0 +1,142 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+}
+
+/* CSS Variables */
+:root {
+    --primary-bg: linear-gradient(135deg,#f5f7fa, #5b548a);
+    --secondary-bg: #ebfffc;
+    --primary-color: #fff;
+    --secondary-color: #555;
+    --card-max-width: 470px;
+    --card-padding: 40px 35px;
+    --border-radius: 20px;
+    --input-height: 60px;
+    --input-padding: 10px 25px;
+    --input-font-size: 18px;
+    --button-size: 60px;
+    --button-icon-size: 16px;
+    --weather-icon-size: 170px;
+    --weather-temp-size: 80px;
+    --weather-desc-size: 45px;
+    --detail-padding: 0 20px;
+    --detail-font-size: 20px;
+    --detail-margin-top: 50px;
+    --error-font-size: 14px;
+    --error-margin-top: 10px;
+}
+
+/* Card */
+.card {
+    width: 90%;
+    max-width: var(--card-max-width);
+    background: var(--primary-bg);
+    color: var(--primary-color);
+    margin: 100px auto 0;
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+}
+
+/* Search */
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: var(--secondary-bg);
+    color: var(--secondary-color);
+    padding: var(--input-padding);
+    height: var(--input-height);
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: var(--input-font-size);
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: var(--secondary-bg);
+    border-radius: 50%;
+    width: var(--button-size);
+    height: var(--button-size);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button img {
+    width: var(--button-icon-size);
+}
+
+/* Weather Icon */
+.weather-icon {
+    width: var(--weather-icon-size);
+    margin-top: 30px;
+}
+
+/* Weather Info */
+.weather h1 {
+    font-size: var(--weather-temp-size);
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: var(--weather-desc-size);
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+/* Details */
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--detail-padding);
+    margin-top: var(--detail-margin-top);
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: var(--detail-font-size);
+    margin-top: -6px;
+}
+
+/* Weather Display */
+.weather {
+    display: none;
+}
+
+/* Error */
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: var(--error-font-size);
+    margin-top: var(--error-margin-top);
+    display: none;
+}
